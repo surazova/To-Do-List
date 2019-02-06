@@ -2,8 +2,8 @@ h3 {
   color: red;
 }
 
-.flex-container {
+.container {
   display: grid;
   justify-content: center;
-  margin: 200px;
+  margin: 100px;
 }
