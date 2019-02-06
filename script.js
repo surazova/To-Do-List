@@ -1,14 +1,17 @@
 // Selecting the elements 
 var enterButton = document.getElementbyId("enter");
-var input =
-  // Functions for events
+var input = document.getElementById("userInput");
+var ul = document.querySelector("ul");
+var item = document.getElementsByTagName("li");
 
-  // Enter 
-  function addListAfterClick() {
-    if (inputLength() > 0) {
-      createListElement();
-    }
+// Functions for events
+
+// Enter 
+function addListAfterClick() {
+  if (inputLength() > 0) {
+    createListElement();
   }
+}
 
 // Enter with the enter button (#13 ASCII)
 function addListAfterKeypress() {
