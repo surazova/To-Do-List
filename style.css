@@ -6,4 +6,5 @@ h3 {
   display: grid;
   justify-content: center;
   margin: 100px;
+  border-style: solid;
 }

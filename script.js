@@ -16,6 +16,7 @@ function listLength() {
 // Creating an entry 
 function createListElement() {
   var li = document.createElement("li");
+
   li.appendChild(document.createTextNode(input.value)); // makes text from input field the li text 
   ul.appendChild(li); // adds li to the ul
   input.value = ""; //Resets the text input field
@@ -30,6 +31,7 @@ function createListElement() {
 
   // Delete Button 
   var deleteBtn = document.createElement("button");
+
   deleteBtn.appendChild(document.createTextNode("X"));
   li.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", deleteListItem);
