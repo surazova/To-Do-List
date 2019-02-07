@@ -5,6 +5,28 @@ var ul = document.querySelector("ul");
 var item = document.getElementsByTagName("li");
 
 // Functions for events
+function inputLength() {
+  return input.value.length;
+}
+
+function listLength() {
+  return item.length;
+}
+
+// Creating an entry 
+function createListElement() {
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(input.value)); // makes text from input field the li text 
+  ul.appendChild(li); // adds li to the ul
+  input.value = ""; //Resets the text input field
+}
+
+
+// Strikethrough 
+
+// Delete Button 
+
+// Add class delete 
 
 // Enter 
 function addListAfterClick() {
