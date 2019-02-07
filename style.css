@@ -1,5 +1,7 @@
-h3 {
+h1 {
   color: red;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 20px;
 }
 
 .container {
@@ -7,4 +9,14 @@ h3 {
   justify-content: center;
   margin: 100px;
   border-style: solid;
+  font-family: 'Major Mono Display', monospace;
+
+}
+
+#userInput {
+  font-family: 'Major Mono Display', monospace;
+}
+
+.delete {
+  display: none;
 }

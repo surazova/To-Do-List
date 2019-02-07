@@ -38,7 +38,7 @@ function createListElement() {
 
   // Add class delete 
   function deleteListItem() {
-    li.classList.add("delete");
+    li.classList.add("delete"); // "delete" class in CSS display: none;
   }
 }
 
