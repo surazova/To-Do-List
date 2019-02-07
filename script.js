@@ -19,27 +19,26 @@ function createListElement() {
   li.appendChild(document.createTextNode(input.value)); // makes text from input field the li text 
   ul.appendChild(li); // adds li to the ul
   input.value = ""; //Resets the text input field
+
+
+  // Strikethrough 
+  function strikeThrough() {
+    li.classList.toggle("done");
+  }
+
+  li.addEventListener("click", strikeThrough);
+
+  // Delete Button 
+  var deleteBtn = document.createElement("button");
+  deleteBtn.appendChild(document.createTextNode("X"));
+  li.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", deleteListItem);
+
+  // Add class delete 
+  function deleteListItem() {
+    li.classList.add("delete");
+  }
 }
-
-
-// Strikethrough 
-function strikeThrough() {
-  li.classList.toggle("done");
-}
-
-li.addEventListener("click", strikeThrough);
-
-// Delete Button 
-var deleteBtn = document.createElement("button");
-deleteBtn.appendChild(document.createTextNode("X"));
-li.appendChild(deleteBtn);
-deleteBtn.addEventListener("click", deleteListItem);
-
-// Add class delete 
-function deleteListItem() {
-  li.classList.add("delete");
-}
-
 // Enter 
 function addListAfterClick() {
   if (inputLength() > 0) {
