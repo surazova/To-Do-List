@@ -1,5 +1,5 @@
 // Selecting the elements 
-var enterButton = document.getElementbyId("enter");
+var enterButton = document.getElementById("enter");
 var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 var item = document.getElementsByTagName("li");
@@ -23,10 +23,22 @@ function createListElement() {
 
 
 // Strikethrough 
+function strikeThrough() {
+  li.classList.toggle("done");
+}
+
+li.addEventListener("click", strikeThrough);
 
 // Delete Button 
+var deleteBtn = document.createElement("button");
+deleteBtn.appendChild(document.createTextNode("X"));
+li.appendChild(deleteBtn);
+deleteBtn.addEventListener("click", deleteListItem);
 
 // Add class delete 
+function deleteListItem() {
+  li.classList.add("delete");
+}
 
 // Enter 
 function addListAfterClick() {
@@ -36,7 +48,7 @@ function addListAfterClick() {
 }
 
 // Enter with the enter button (#13 ASCII)
-function addListAfterKeypress() {
+function addListAfterKeypress(event) {
   if (inputLength() > 0 && event.which === 13) {
     createListElement();
   }
