@@ -41,6 +41,7 @@ function createListElement() {
     li.classList.add("delete");
   }
 }
+
 // Enter 
 function addListAfterClick() {
   if (inputLength() > 0) {
