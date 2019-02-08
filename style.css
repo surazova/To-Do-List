@@ -2,6 +2,7 @@ h1 {
   color: grey;
   font-family: 'Major Mono Display', monospace;
   font-size: 20px;
+  text-align: center;
 }
 
 .container {
@@ -14,8 +15,23 @@ h1 {
 
 #userInput {
   font-family: 'Major Mono Display', monospace;
+  text-align: center;
 }
 
 .delete {
   display: none;
+}
+
+button {
+  font-family: inherit;
+  color: white;
+}
+
+li>button {
+  background: white;
+  text-align: left;
+  color: grey;
+  font-family: inherit;
+  border: 0;
+
 }

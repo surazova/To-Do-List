@@ -32,7 +32,7 @@ function createListElement() {
   // Delete Button 
   var deleteBtn = document.createElement("button");
 
-  deleteBtn.appendChild(document.createTextNode("X"));
+  deleteBtn.appendChild(document.createTextNode("       x"));
   li.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", deleteListItem);
 
@@ -53,6 +53,19 @@ function addListAfterClick() {
 function addListAfterKeypress(event) {
   if (inputLength() > 0 && event.which === 13) {
     createListElement();
+  }
+}
+
+
+
+// Dark Mode Toggle Function
+function dark() {
+  if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+    document.body.style.backgroundColor = '#333';
+  }
+  else {
+    document.body.style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
